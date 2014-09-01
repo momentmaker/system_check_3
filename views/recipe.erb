@@ -1,0 +1,22 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/styles.css">
+  <title><%= @recipe[0]["recipe_name"] %> Recipe</title>
+</head>
+
+<h1><%= @recipe[0]["recipe_name"] %> Recipe</h1>
+
+<h3>What is it?</h3>
+
+<p><%= @recipe[0]["description"] %></p>
+
+<h3>How to make it?</h3>
+
+<p><%= @recipe[0]["instructions"] %></p>
+
+<h3>Ingredients Required</h3>
+<ul>
+  <% @recipe.each do |ingredient| %>
+  <li><%= ingredient["ingredient_name"] %></li>
+  <% end %>
+</ul>

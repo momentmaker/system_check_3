@@ -1,0 +1,13 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Launch Academy Recipes of Sweeeetness</title>
+</head>
+
+
+<h1>Launch Academy Recipes of Sweeeetness</h1>
+<ul>
+  <% @list.each do |recipe| %>
+  <li><a href="recipes/<%= recipe["id"] %>"><%= recipe["name"] %></a></li>
+  <% end %>
+</ul>
